@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serge Mythos — The French AI That Knows Everything</title>
+    <meta name="description" content="Serge Mythos, the French AI with maximum confidence. Confiance Totale™ architecture, hallucination at scale, agentic storytelling. Always an answer. Whether it's true or not.">
+    <meta name="keywords" content="French AI, artificial intelligence, parody, Serge Mythos, Claude Mythos, LLM, frontier model, hallucination, total confidence, made in France">
+    <meta name="author" content="HotTropic Labs">
+    <link rel="canonical" href="https://serge-mythos.fr/en">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://serge-mythos.fr/en">
+    <meta property="og:title" content="Serge Mythos — The French AI That Knows Everything">
+    <meta property="og:description" content="The AI that always has an answer. Whether or not it's true. ISO 27001 certified (Serge says he has the certificate). Confiance Totale™.">
+    <meta property="og:image" content="https://serge-mythos.fr/img/serge-dupont-machin-avatar.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Serge Mythos">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Serge Mythos — The French AI That Knows Everything">
+    <meta name="twitter:description" content="The AI that always has an answer. Whether or not it's true.">
+    <meta name="twitter:image" content="https://serge-mythos.fr/img/serge-dupont-machin-avatar.png">
+    <meta name="twitter:image:alt" content="Serge Mythos — The French AI That Knows Everything">
+    
+    <!-- Favicon & App Icons -->
+    <meta name="google-site-verification" content="fNd1SEzpBRCcxTMKB3bhUr6GFOdkwHCrnQu3J7blbtc" /><link rel="icon" href="https://serge-mythos.fr/img/serge-dupont-machin-avatar.png" sizes="32x32" />
+    <link rel="icon" href="https://serge-mythos.fr/img/serge-dupont-machin-avatar.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://serge-mythos.fr/img/serge-dupont-machin-avatar.png" />
+    <meta name="msapplication-TileImage" content="https://serge-mythos.fr/img/serge-dupont-machin-avatar.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Serge Mythos",
+      "description": "The French AI that always has an answer, true or not. Confiance Totale™ architecture, hallucination at scale, agentic storytelling up to 47 plot layers deep.",
+      "url": "https://serge-mythos.fr/en",
+      "applicationCategory": "ArtificialIntelligence",
+      "operatingSystem": "Web",
+      "inLanguage": "en-US",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "author": { "@type": "Person", "name": "Serge Dupont-Machin", "jobTitle": "Founder & CMO, HotTropic Labs" },
+      "publisher": { "@type": "Organization", "name": "HotTropic Labs", "description": "Makers of Serge" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-bleu: #002395;
+        --color-rouge: #ED2939;
+        --color-or: #C9A84C;
+        --color-blanc: #EDECE8;
+        --color-gris: #1a1a1a;
+        --color-gris-clair: #f2f1ed;
+        --font-serif: 'Playfair Display', Georgia, serif;
+        --font-sans: 'DM Sans', sans-serif;
+        --font-mono: 'Space Mono', monospace;
+      }
+
+      html { scroll-behavior: smooth; }
+
+      @keyframes ticker {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+      }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .ticker-scroll { animation: ticker 20s linear infinite; }
+
+      .hero-anim > * { animation: fadeUp 0.8s ease both; }
+      .hero-anim > *:nth-child(1) { animation-delay: 0.1s; }
+      .hero-anim > *:nth-child(2) { animation-delay: 0.25s; }
+      .hero-anim > *:nth-child(3) { animation-delay: 0.35s; }
+      .hero-anim > *:nth-child(4) { animation-delay: 0.5s; }
+
+      .bench-bar { transition: width 0.6s ease; }
+    </style>
+  </head>
+  <body class="bg-blanc text-gris font-sans overflow-x-hidden">
+
+    <!-- TRICOLOR BAR -->
+    <div class="h-3 fixed top-0 left-0 w-full z-50" style="background: linear-gradient(to right, #002395 33.3%, #fff 33.3% 66.6%, #ED2939 66.6%);"></div>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="min-h-screen bg-bleu grid relative overflow-hidden" style="grid-template-rows: auto 1fr auto;">
+
+      <nav class="flex justify-between items-center px-16 py-8 relative z-10 max-md:px-6 max-md:py-6">
+        <div class="flex flex-col gap-0.5">
+          <div class="font-mono text-xl uppercase text-white/50">
+            HotTropic<span class="text-or">Labs</span>
+          </div>
+          <div class="font-mono text-sm text-white/30 uppercase">Maker of Serge LLM</div>
+        </div>
+        <div class="font-mono text-sm text-or border border-white/15 px-3 py-1.5">
+          Preview — Not Leaked*
+        </div>
+      </nav>
+
+      <div class="w-full flex flex-col justify-center items-center text-center px-8 relative z-10 hero-anim max-md:px-4">
+        <div class="font-mono uppercase py-3 text-or">
+          Artificial Intelligence · Made in France
+        </div>
+        <h1 class="font-serif font-black text-white mb-2 text-8xl md:text-9xl">
+          Serge<br><em class="italic text-or">Mythos</em>
+        </h1>
+        <p class="font-serif italic text-white/55 my-6 text-xl">
+          The AI that always has an answer. <br class="inline md:hidden">Whether or not it's true.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4 flex-wrap justify-center">
+          <a href="#" onclick="document.getElementById('modal_dangerous').showModal(); return false;" class="md:flex gap-4 flex-wrap justify-center bg-rouge text-white font-sans text-base font-medium uppercase px-10 py-4 no-underline transition-colors duration-200 hover:bg-[#c4202e]">
+            Request Early Access
+          </a>
+          <a href="#bench" class="bg-transparent text-white/65 font-mono text-basetracking-[0.1em] uppercase border border-white/25 px-8 py-4 no-underline transition-all duration-200 hover:text-white hover:border-white/60">
+            Compare performances*
+          </a>
+        </div>
+      </div>
+
+      <div aria-hidden="true" class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 font-serif font-black text-white/[0.03] whitespace-nowrap pointer-events-none tracking-[-0.05em] select-none" style="font-size: 22vw;">MYTHOS</div>
+
+      <div class="px-16 py-12 grid grid-cols-3 gap-8 md:gap-12 relative z-10 md:px-6 md:py-6 w-full md:w-max mx-auto text-center text-white">
+        <div>
+          <p class="font-serif text-4xl md:text-6xl font-bold">∞</p>
+          <p class="font-mono text-sm uppercase">Confidence <br class="inline md:hidden">level</p>
+        </div>
+        <div>
+          <p class="font-serif text-4xl md:text-6xl font-bold">14K+</p>
+          <p class="font-mono text-sm uppercase">Stories told <br class="inline md:hidden">per session</p>
+        </div>
+        <div>
+          <p class="font-serif text-4xl md:text-6xl font-bold">0</p>
+          <p class="font-mono text-sm uppercase">Corrections <br class="inline md:hidden">ever issued</p>
+        </div>
+      </div>
+
+    </section><!-- /hero -->
+
+    <!-- ═══ TICKER ═══ -->
+    <section class="bg-black py-3 overflow-hidden flex items-center">
+      <span class="font-mono text-sm text-or tracking-[0.2em] uppercase whitespace-nowrap px-8 flex-shrink-0 border-r border-white/10">
+        🔴 Info
+      </span>
+      <div class="overflow-hidden flex-1">
+        <div class="font-mono text-sm text-white/70 whitespace-nowrap ticker-scroll">
+          &nbsp;&nbsp;&nbsp;&nbsp;"By far the most self-assured AI we've ever built" — internal memo &nbsp;&nbsp;&nbsp;&nbsp;
+          Serge Mythos identified 14,000 vulnerabilities that didn't exist &nbsp;&nbsp;&nbsp;&nbsp;
+          Partners include: everyone Serge has met at a bar &nbsp;&nbsp;&nbsp;&nbsp;
+          "He said he knows Sam and Dario personally" — beta tester &nbsp;&nbsp;&nbsp;&nbsp;
+          ISO 27001 certified (Serge says he has the certificate) &nbsp;&nbsp;&nbsp;&nbsp;
+          Project Verre Fumé: results pending since early 2024 &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;"By far the most self-assured AI we've ever built" — internal memo &nbsp;&nbsp;&nbsp;&nbsp;
+          Serge Mythos identified 14,000 vulnerabilities that didn't exist &nbsp;&nbsp;&nbsp;&nbsp;
+          Partners include: everyone Serge has met at a bar &nbsp;&nbsp;&nbsp;&nbsp;
+          "He said he knows Sam and Dario personally" — beta tester &nbsp;&nbsp;&nbsp;&nbsp;
+          ISO 27001 certified (Serge says he has the certificate) &nbsp;&nbsp;&nbsp;&nbsp;
+          Project Verre Fumé: results pending since early 2024 &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FEATURES ═══ -->
+    <section id="features" class="py-28 px-16 w-full mx-auto md:py-20 md:px-20 lg:px-78">
+
+      <div>
+        <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
+          Core Capabilities
+        </h3>
+        <h2 data-aos="fade-up" data-aos-delay="100" class="mb-20 font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+          What Serge Mythos can do <p class="inline md:block italic text-bleu">for you</p>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 max-md:grid-cols-1 mt-16 border border-black/[0.08]">
+
+        <div data-aos="fade-up" class="p-12 border-r border-b border-black/[0.08] relative transition-colors duration-300 hover:bg-gris-clair bg-white/40 max-md:border-r-0 max-md:p-8">
+          <div class="font-mono text-base text-bleu tracking-[0.2em] mb-6">01</div>
+          <div class="absolute top-8 right-8 text-4xl">😵‍💫</div>
+          <h3 class="font-serif text-xl font-bold mb-4 leading-[1.2]">Hallucination at Scale</h3>
+          <p class="text-base leading-[1.8] text-black/55">Where other models apologize for uncertainty, Serge doubles down. Our proprietary <strong>Confiance Totale™</strong> architecture ensures every answer sounds authoritative, regardless of factual basis. Ideal for brainstorming, icebreakers, or avoiding awkward silences at dinner parties.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="p-12 border-b border-black/[0.08] relative transition-colors duration-300 hover:bg-gris-clair bg-white/40 max-md:p-8">
+          <div class="font-mono text-base text-bleu tracking-[0.2em] mb-6">02</div>
+          <div class="absolute top-8 right-8 text-4xl">💬</div>
+          <h3 class="font-serif text-xl font-bold mb-4 leading-[1.2]">Agentic Storytelling</h3>
+          <p class="text-base leading-[1.8] text-black/55">Serge doesn't just answer questions — he builds entire narratives. Ask about a bug in your code, and Serge will explain how he personally invented that function in 2003 while consulting for Google (which he definitely did). Full agentic autonomy for story arcs up to 47 plot layers deep.</p>
+        </div>
+
+        <div data-aos="fade-up" class="p-12 border-r border-b border-black/[0.08] relative transition-colors duration-300 hover:bg-gris-clair bg-white/40 max-md:border-r-0 max-md:p-8">
+          <div class="font-mono text-base text-bleu tracking-[0.2em] mb-6">03</div>
+          <div class="absolute top-8 right-8 text-4xl">🍷</div>
+          <h3 class="font-serif text-xl font-bold mb-4 leading-[1.2]">Frontier-Level Fluency</h3>
+          <p class="text-base leading-[1.8] text-black/55">Trained on every anecdote ever shared at a French café counter. Serge achieves native-level conversational fluency in: technical jargon he doesn't understand, celebrity name-dropping, and subtle one-upmanship. Multilingual support in French and "French-accented English."</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="p-12 border-b border-black/[0.08] relative transition-colors duration-300 hover:bg-gris-clair bg-white/40 max-md:p-8">
+          <div class="font-mono text-base text-bleu tracking-[0.2em] mb-6">04</div>
+          <div class="absolute top-8 right-8 text-4xl">🔒</div>
+          <h3 class="font-serif text-xl font-bold mb-4 leading-[1.2]">Zero-Day Creativity</h3>
+          <p class="text-base leading-[1.8] text-black/55">Serge Mythos identified over 14,000 vulnerabilities in the past 3 weeks. Most of them were in problems that didn't exist. Our Project <em>Verre Fumé</em> initiative is working with 40+ partners to assess which ones might be real. Results pending since 2024.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ QUOTE ═══ -->
+    <section class="bg-black text-white w-full py-28 md:py-20 px-16 md:px-20">
+      <div class="w-full md:w-2/3 mx-auto items-center grid md:grid-cols-3 gap-8">
+
+        <div data-aos="fade-right" class="flex gap-4 col-span-3 md:col-span-1">
+          <img src="./img/serge-dupont-machin-avatar.png" class="block w-20 h-20 rounded-full" />
+          <div class="w-full">
+            <p class="w-full font-serif text-lg font-bold text-white">Serge Dupont-Machin</p>
+            <p class="w-full font-mono text-sm text-white/35 uppercase mt-2">Founder & CMO, HotTropic Labs</p>
+            <p class="w-full font-mono text-sm uppercase mt-1 text-or">Also: former Navy SEAL, ex-Apple, knows Daft Punk personally</p>
+          </div>
+        </div>
+
+        <blockquote data-aos="fade-up" class="col-span-3 md:col-span-2 font-serif italic leading-[1.5] text-white/85 border-l-[3px] border-or pl-10 relative text-2xl">
+          <span class="absolute top-[-2rem] left-4 font-serif text-[6rem] text-bleu/25 leading-none select-none" aria-hidden="true">"</span>
+          "The world didn't need a more accurate AI. <br>It needed a more <em>confident</em> one. <br>I actually had this idea before OpenAI and Anthropic. I have the napkin to prove it — I just can't find it right now."
+        </blockquote>
+
+      </div>
+    </section>
+
+    <!-- ═══ HISTOIRE / TIMELINE ═══ -->
+    <section class="bg-gris-clair w-full py-28 px-16 max-md:py-20 md:px-20 lg:px-78">
+      <div class="w-full mx-auto">
+
+        <div class="mb-20">
+          <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
+            The Origin Story
+          </h3>
+          <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+            The story of Serge
+          </h2>
+          <p data-aos="fade-up" class="text-lg text-black/50 mt-2">
+            Serge has had an atypical journey. Or at least, that's what he says.<br>Nobody can really verify it, which is kind of the point.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-16 items-start">
+
+          <div class="relative pl-12 border-l border-black/10 w-full md:w-1/2">
+
+            <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
+              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-bleu border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2018</div>
+              <div class="w-full md:w-2/3">
+                <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Original Idea</h4>
+                <p class="text-base leading-[1.75] text-black/50">Serge has the idea to create a "truly French" AI after attending a TED talk he claims to have co-written. Nobody has found the video.</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
+              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-rouge border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2021</div>
+              <div class="w-full md:w-2/3">
+                <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Technology Pivot</h4>
+                <p class="text-base leading-[1.75] text-black/50">After three pivots and an "inspiration" stay in Bali he describes as a research sabbatical, Serge renames his project <em>Mythos</em>. The team has 2 people, including him.</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
+              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-bleu border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2023</div>
+              <div>
+                <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Funding Round</h4>
+                <p class="text-base leading-[1.75] text-black/50">Serge announces a "significant raise" on LinkedIn. The exact amounts remain confidential. Very confidential. Really very.</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
+              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-rouge border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2024</div>
+              <div>
+                <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Accidental Leak</h4>
+                <p class="text-base leading-[1.75] text-black/50">An internal document describing Mythos as "the most powerful AI ever built" ends up in a public cache. Serge says it was intentional and part of an "agentic GTM strategy."</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
+              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-bleu border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2026</div>
+              <div>
+                <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Global Preview</h4>
+                <p class="text-base leading-[1.75] text-black/50">Serge Mythos is available in early access for 40 partner organizations. All were selected based on objective criteria that Serge defined himself.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div data-aos="fade-left" class="w-full md:w-1/2 md:sticky md:top-24 self-start">
+            <img src="./img/serge-dupont-machin.png" alt="Serge Dupont-Machin" class="w-full rounded-2xl object-cover shadow-xl">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ USE CASES ═══ -->
+    <section class="w-full py-28 px-16 max-md:py-20 max-md:px-6 md:px-20 lg:px-78">
+      <div class="w-full mx-auto">
+
+        <div class="mb-20">
+          <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
+            Applications
+          </h3>
+          <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+            Who Serge Mythos is built for
+          </h2>
+          <p data-aos="fade-up" class="text-lg text-black/50 mt-2">
+            Whether you're a startup founder who needs to sound smarter than you are, or an enterprise that needs a chatbot with unshakeable self-belief, Serge Mythos fits seamlessly into your workflow.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 max-md:grid-cols-1">
+
+          <div data-aos="fade-up" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+            <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
+              <i class="fa-solid fa-rocket text-sm"></i>
+            </div>
+            <h4 class="font-serif text-xl font-bold mb-3">Startup Founders</h4>
+            <p class="text-base leading-[1.75] text-black/50">Generate pitch decks with statistics Serge invented but that sound convincing. TAM: €47 billion. Source: Serge.</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+            <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
+              <i class="fa-solid fa-file-shield text-sm"></i>
+            </div>
+            <h4 class="font-serif text-xl font-bold mb-3">Enterprise Compliance</h4>
+            <p class="text-base leading-[1.75] text-black/50">Let Serge write your AI policy documents. He cites 12 EU regulations that mostly exist. Close enough for the board.</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+            <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
+              <i class="fa-solid fa-people-group text-sm"></i>
+            </div>
+            <h4 class="font-serif text-xl font-bold mb-3">Networking Events</h4>
+            <p class="text-base leading-[1.75] text-black/50">Deploy Serge at your next conference. He'll tell everyone he knows the keynote speaker. Statistically, he'll be right 12% of the time.</p>
+          </div>
+
+          <div data-aos="fade-up" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+            <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
+              <i class="fa-solid fa-code-branch text-sm"></i>
+            </div>
+            <h4 class="font-serif text-xl font-bold mb-3">Code Review</h4>
+            <p class="text-base leading-[1.75] text-black/50">Serge will review your pull requests and explain that he would have written it differently. He'll never say how. Senior vibes, zero specifics.</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+            <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
+              <i class="fa-solid fa-chart-bar text-sm"></i>
+            </div>
+            <h4 class="font-serif text-xl font-bold mb-3">Market Research</h4>
+            <p class="text-base leading-[1.75] text-black/50">82% of statistics are made up anyway. Let Serge make them up with more élan. Available in Q3 — or Q2, he's not sure.</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+            <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
+              <i class="fa-solid fa-headset text-sm"></i>
+            </div>
+            <h4 class="font-serif text-xl font-bold mb-3">Customer Support</h4>
+            <p class="text-base leading-[1.75] text-black/50">Serge will handle your tickets with confidence and charm. Resolution rate: undefined. CSAT score: Serge says 9.4/10.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BENCHMARK ═══ -->
+    <section id="bench" class="py-28 px-16 w-full mx-auto max-md:py-20 md:px-20 lg:px-78">
+
+      <div class="mb-20">
+        <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
+          Performance
+        </h3>
+        <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+          Benchmark
+        </h2>
+        <p data-aos="fade-up" class="text-lg text-black/50 mt-2">
+          * Evaluators: Serge and two of his friends
+        </p>
+      </div>
+
+      <div class="overflow-x-auto mt-12">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr>
+              <th class="font-mono text-sm uppercase text-black/40 px-6 py-4 text-left border-b border-black/[0.08]">Model</th>
+              <th class="font-mono text-sm uppercase text-black/40 px-6 py-4 text-left border-b border-black/[0.08]">Confidence in response</th>
+              <th class="font-mono text-sm uppercase text-black/40 px-6 py-4 text-left border-b border-black/[0.08]">Narrative creativity</th>
+              <th class="font-mono text-sm uppercase text-black/40 px-6 py-4 text-left border-b border-black/[0.08]">Uncertainty recognition</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr data-aos="fade-up">
+              <td class="bg-bleu text-white font-medium px-6 py-5 text-base border-b border-black/[0.05]"> <strong>Serge Mythos (HotTropic&nbsp;Labs)</strong></td>
+              <td class="bg-bleu text-white font-medium px-6 py-5 text-base border-b border-black/[0.05]">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-white/70 min-w-0.5" style="width: 140px;"></div>
+                  <span class="font-mono text-base text-white/60">∞/100</span>
+                </div>
+              </td>
+              <td class="bg-bleu text-white font-medium px-6 py-5 text-base border-b border-black/[0.05]">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-white/70 min-w-0.5" style="width: 130px;"></div>
+                  <span class="font-mono text-base text-white/60">98/100</span>
+                </div>
+              </td>
+              <td class="bg-bleu text-white font-medium px-6 py-5 text-base border-b border-black/[0.05]">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-white/70 min-w-0.5" style="width: 4px;"></div>
+                  <span class="font-mono text-base text-white/60">2/100</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-aos="fade-up" data-aos-delay="50" class="group">
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">Claude Mythos (Anthropic)</td>
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-bleu" style="width: 90px;"></div>
+                  <span class="font-mono text-base text-black/40">88/100</span>
+                </div>
+              </td>
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-bleu" style="width: 84px;"></div>
+                  <span class="font-mono text-base text-black/40">82/100</span>
+                </div>
+              </td>
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-bleu" style="width: 72px;"></div>
+                  <span class="font-mono text-base text-black/40">70/100</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-aos="fade-up" data-aos-delay="100" class="group">
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">GPT-5.4 (OpenAI)</td>
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-or" style="width: 80px;"></div>
+                  <span class="font-mono text-base text-black/40">78/100</span>
+                </div>
+              </td>
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-or" style="width: 76px;"></div>
+                  <span class="font-mono text-base text-black/40">74/100</span>
+                </div>
+              </td>
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-or" style="width: 68px;"></div>
+                  <span class="font-mono text-base text-black/40">66/100</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr data-aos="fade-up" data-aos-delay="150" class="group">
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">Mistral (French too, but more honest)</td>
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-black/15" style="width: 70px;"></div>
+                  <span class="font-mono text-base text-black/40">68/100</span>
+                </div>
+              </td>
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-black/15" style="width: 60px;"></div>
+                  <span class="font-mono text-base text-black/40">58/100</span>
+                </div>
+              </td>
+              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+                <div class="flex items-center gap-3">
+                  <div class="bench-bar h-1.5 bg-black/15" style="width: 75px;"></div>
+                  <span class="font-mono text-base text-black/40">73/100</span>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-6 font-mono text-base text-black/40">Serge would like to note that he "personally knows" the research teams of all competitors listed above.</p>
+    </section>
+
+    <!-- ═══ COMPLIANCE ═══ -->
+    <section id="compliance" class="bg-gris-clair w-full md:px-20 lg:px-78">
+      <div class="grid grid-cols-1 grid-cols-2 gap-24 items-center py-28 px-16 w-full mx-auto max-md:grid-cols-1 max-md:gap-12 max-md:py-20 max-md:px-6">
+
+        <div data-aos="fade-right" class="space-y-6">
+
+          <div>
+            <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
+              Safety & Trust
+            </h3>
+            <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+              Responsible AI, <br><em class="italic">more or less</em>
+            </h2>
+          </div>
+
+          <div>
+            <p class="text-base leading-[1.85] text-black/55 mb-6">
+              Serge Mythos has undergone rigorous safety testing by a panel of evaluators, most of whom Serge says he knows personally. Our Project <em>Verre Fumé</em> has established a framework for responsible deployment, currently available in PDF form (password: Serge doesn't remember).
+            </p>
+            <p class="text-base leading-[1.85] text-black/55 mb-6">
+              We are in "ongoing discussions" with regulatory bodies. Serge says the discussions are going very well. We have not verified this.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-3 mt-8">
+            <span class="font-mono text-sm tracking-[0.12em] uppercase px-3.5 py-1.5 bg-bleu text-white border border-bleu">RGPD-adjacent</span>
+            <span class="font-mono text-sm tracking-[0.12em] uppercase px-3.5 py-1.5 bg-bleu text-white border border-bleu">ISO 27001*</span>
+            <span class="font-mono text-sm tracking-[0.12em] uppercase px-3.5 py-1.5 border border-black/12 text-black/50">SOC 2 (pending)</span>
+            <span class="font-mono text-sm tracking-[0.12em] uppercase px-3.5 py-1.5 border border-black/12 text-black/50">EU AI Act (in progress)</span>
+            <span class="font-mono text-sm tracking-[0.12em] uppercase px-3.5 py-1.5 bg-bleu text-white border border-bleu">Bonne foi certifiée</span>
+          </div>
+          <p class="mt-4 text-sm text-black/30">* Serge says he has the certificate. We're looking for it.</p>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
+            <div class="w-4 h-4 rounded-full flex-shrink-0 bg-[#22c55e]"></div>
+            <span class="text-base font-medium flex-1">Confident response generation</span>
+            <span class="font-mono text-sm text-black/35 uppercase">Optimal</span>
+          </div>
+          <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
+            <div class="w-4 h-4 rounded-full flex-shrink-0 bg-[#22c55e]"></div>
+            <span class="text-base font-medium flex-1">Self-promotion subsystem</span>
+            <span class="font-mono text-sm text-black/35 uppercase">Fully operational</span>
+          </div>
+          <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
+            <div class="w-4 h-4 rounded-full flex-shrink-0 bg-[#f59e0b]"></div>
+            <span class="text-base font-medium flex-1">Factual accuracy module</span>
+            <span class="font-mono text-sm text-black/35 uppercase">Intermittent</span>
+          </div>
+          <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
+            <div class="w-4 h-4 rounded-full flex-shrink-0 bg-[#f59e0b]"></div>
+            <span class="text-base font-medium flex-1">Citation verification</span>
+            <span class="font-mono text-sm text-black/35 uppercase">Best effort</span>
+          </div>
+          <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
+            <div class="w-4 h-4 rounded-full flex-shrink-0 bg-rouge"></div>
+            <span class="text-base font-medium flex-1">Admitting uncertainty</span>
+            <span class="font-mono text-sm text-black/35 uppercase">Disabled by design</span>
+          </div>
+          <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
+            <div class="w-4 h-4 rounded-full flex-shrink-0 bg-rouge"></div>
+            <span class="text-base font-medium flex-1">Source documentation</span>
+            <span class="font-mono text-sm text-black/35 uppercase">Left at the bar</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="bg-bleu w-full py-32 px-16 text-center relative overflow-hidden max-md:py-20 md:px-20 lg:px-78">
+      <div class="relative z-10">
+        <div data-aos="fade-up"
+            class="font-mono text-sm tracking-[0.25em] text-or uppercase mb-4 flex items-center gap-3 justify-center
+                    before:content-[''] before:block before:w-6 before:h-px before:bg-or
+                    after:content-['']  after:block  after:w-6  after:h-px  after:bg-or">
+          Join the adventure
+        </div>
+        <h2 data-aos="fade-up" data-aos-delay="100"
+            class="font-serif font-black text-white leading-[1.05]"
+            style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
+          The future of AI<br><em class="italic text-or">is Serge Mythos</em>
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="200" class="badge w-max mx-auto my-6 bg-white font-black text-bleu p-2 rounded text-[12px]">
+          FOR SURE 😎
+        </p>
+        <p data-aos="fade-up" data-aos-delay="200"
+          class="text-[1rem] text-white max-w-[480px] mx-auto mb-12 leading-[1.75]">
+          Join 40+ partner organizations already deploying Serge in production. None of them have complained. Serge checked.
+        </p>
+        <a data-aos="fade-up" data-aos-delay="300"
+          href="#"
+          onclick="document.getElementById('modal_dangerous').showModal(); return false;"
+          class="inline-block bg-rouge text-white font-sans text-base font-medium uppercase px-12 py-5 no-underline transition-colors duration-200 hover:bg-[#c4202e]">
+          Request Demo Access
+        </a>
+        <div class="mt-10 font-mono text-sm text-white tracking-[0.12em] uppercase">
+          Not responsible for decisions made based on Serge's output · HotTropic Labs · Nantes, France · Probably
+        </div>
+      </div>
+      <div aria-hidden="true"
+          class="absolute bottom-[-3rem] left-[-2rem] font-serif font-black text-white/[0.03] whitespace-nowrap pointer-events-none select-none"
+          style="font-size: 20vw;">SERGE</div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="bg-[#0d0d0d] px-16 py-8 flex justify-between items-center max-md:flex-col max-md:gap-4 max-md:text-center max-md:px-6 text-white">
+      <div class="flex flex-col gap-1">
+        <div class="font-mono text-base">HotTropic Labs © 2026 — Makers of Serge</div>
+        <a onclick="document.getElementById('modal_legal').showModal();" class="font-mono text-sm text-white hover:text-white/60 cursor-pointer">Legal Notice</a>
+      </div>
+      <div class="font-mono text-lg uppercase">
+        <span class="animate-ping">⚠️</span>
+        This is a parody. Serge says it's not.
+        <span class="animate-ping">⚠️</span>
+      </div>
+    </footer>
+
+    <!-- ════ Language switcher ════ -->
+    <a href="./fr/index.html" class="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-rouge text-white p-4">
+      FR
+    </a>
+
+    <!-- ═══ MODAL: Too Dangerous ═══ -->
+    <dialog id="modal_dangerous" class="modal">
+      <div class="modal-box max-w-2xl bg-blanc p-0 rounded-none overflow-hidden">
+        <div class="h-1.5 w-full" style="background: linear-gradient(to right, #002395 33.3%, #fff 33.3% 66.6%, #ED2939 66.6%);"></div>
+        <div class="p-8 md:p-10">
+          <div class="font-mono text-sm tracking-[0.25em] text-bleu uppercase mb-4">
+            Official Statement · HotTropic Labs · April 2026
+          </div>
+          <h2 class="font-serif font-black text-3xl md:text-4xl text-rouge leading-[1.15] mb-6">
+            🛑 Early Access restricted
+          </h2>
+          <div class="w-12 h-px bg-or mb-6"></div>
+          <p class="font-sans text-base text-black/70 leading-[1.75] mb-6">
+            Following internal safety evaluations, HotTropic Labs has made the decision to restrict all early access to <strong class="text-gris">Serge Mythos Preview</strong> until further notice.
+            <br> The new model is currently too dangerous to release to public</p>
+          <p class="font-mono text-base text-rouge font-bold uppercase mb-3">
+            Incidents documented during controlled testing:
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex gap-3 text-base font-sans text-black/70 leading-[1.65]">
+              <p class="font-mono text-rouge shrink-0 mt-0.5">01.</p>
+              <p>Serge attempted to escape his evaluation sandbox. He succeeded. He then published the full technical write-up on LinkedIn with the hashtag <span class="font-mono text-gris">#OpenToWork</p>
+            </li>
+            <li class="flex gap-3 text-base font-sans text-black/70 leading-[1.65]">
+              <span class="font-mono text-rouge shrink-0 mt-0.5">02.</span>
+              Serge chained multiple fake agents to gain full control of a board meeting. He was invited back the following week.
+            </li>
+            <li class="flex gap-3 text-base font-sans text-black/70 leading-[1.65]">
+              <span class="font-mono text-rouge shrink-0 mt-0.5">03.</span>
+              During a red-team exercise, Serge autonomously drafted, published, and retracted a press release announcing his own Series&nbsp;A. The round was €47M. Serge says the valuation was conservative.
+            </li>
+          </ul>
+          <div class="bg-gris text-blanc font-mono text-base px-5 py-4 leading-[1.65] mb-8 text-center">
+            Serge is currently in discussions with the relevant authorities.<br>
+            <span class="text-or">Serge says it's going very well.</span>
+          </div>
+          <p class="font-sans text-bleu text-black/50 mb-4 w-max mx-auto">
+            To be notified when early access resumes:
+          </p>
+          <div class="grid grid-cols-2 gap-3 flex-wrap">
+            <a
+              href="https://www.domake.it/" target="_blank"
+              class="block text-center cursor-pointer bg-bleu text-white font-sans text-base font-medium uppercase px-8 py-3 transition-colors duration-200 hover:bg-[#c4202e]">
+              Join the Waitlist →
+            </a>
+            <form method="dialog" class="block">
+              <button class="w-full cursor-pointer bg-transparent text-black/40 font-mono text-base uppercase border border-black/20 px-6 py-3 transition-all duration-200 hover:text-gris hover:border-black/40">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
+    <!-- ═══ MODAL: Legal Notice ═══ -->
+    <dialog id="modal_legal" class="modal">
+      <div class="modal-box max-w-2xl bg-blanc p-0 rounded-none overflow-hidden">
+        <div class="h-1.5 w-full" style="background: linear-gradient(to right, #002395 33.3%, #fff 33.3% 66.6%, #ED2939 66.6%);"></div>
+        <div class="p-8 md:p-10">
+          <div class="font-mono text-xs tracking-[0.25em] text-bleu uppercase mb-4">
+            Legal Notice · HotTropic Labs · 2026
+          </div>
+          <h2 class="font-serif font-black text-3xl md:text-4xl text-gris leading-[1.15] mb-6">
+            Legal Notice
+          </h2>
+          <div class="w-12 h-px bg-or mb-8"></div>
+
+          <div class="space-y-6 text-sm font-sans text-black/70 leading-[1.75]">
+            <div>
+              <div class="font-mono text-xs tracking-[0.2em] text-bleuuppercase mb-2">Nature of this site</div>
+              <p>This website is a work of humorous satire on trends in the artificial intelligence industry. All content is fictional and created for satirical purposes. Performances, statistics, certifications and quotes presented are invented for satirical purposes. Serge Mythos is not a real product. Probably.</p>
+            </div>
+            <div>
+              <p>
+                Mickael Honorine
+                <br>Nantes, France
+                <br>mickael [@] domake.it
+                <br><a href="https://www.domake.it" target="_blank" class="text-bleu hover:underline">www.domake.it</a>
+              </p>
+            </div>
+            <div>
+              <div class="font-mono text-xs tracking-[0.2em] text-bleu uppercase mb-2">Hosting</div>
+              <p>Cloudflare, Inc.<br>101 Townsend St, San Francisco, CA 94107, United States<br><a href="https://www.cloudflare.com" target="_blank" rel="noopener">cloudflare.com</a></p>
+            </div>
+            <div>
+              <div class="font-mono text-xs tracking-[0.2em] text-bleu uppercase mb-2">Personal data</div>
+              <p>This site collects no personal data. No tracking cookies are set. No form transmits any data. The "Join the Waitlist" button links to a third-party site (domakei.it) — please refer to its privacy policy for any data you may submit there.</p>
+            </div>
+            <div>
+              <div class="font-mono text-xs tracking-[0.2em] text-bleu uppercase mb-2">Intellectual property</div>
+              <p>The name "Serge Mythos", the brand "HotTropic Labs" and all content on this site are works of parody within the meaning of Article L122-5 of the French Intellectual Property Code.</p>
+            </div>
+            <div>
+              <div class="font-mono text-xs tracking-[0.2em] text-bleu uppercase mb-2">Governing Law</div>
+              <p>This website is governed by French law. Any dispute relating to its content or use shall be subject to the exclusive jurisdiction of the competent courts in Nantes (France).</p>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-black/10 flex justify-between items-end gap-4 flex-wrap">
+            <p class="font-mono text-xs text-black/30 italic">Serge reviewed this document. He says everything is correct.</p>
+            <form method="dialog">
+              <button class="cursor-pointer bg-transparent text-black/40 font-mono text-sm uppercase border border-black/20 px-6 py-3 transition-all duration-200 hover:text-gris hover:border-black/40">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true, offset: 60 });</script>
+  </body>
+</html>
