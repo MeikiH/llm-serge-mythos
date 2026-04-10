@@ -81,6 +81,9 @@
       }
 
       .ticker-scroll { animation: ticker 20s linear infinite; }
+      @media (max-width: 768px) {
+        .ticker-scroll { animation-duration: 3s; }
+      }
 
       .hero-anim > * { animation: fadeUp 0.8s ease both; }
       .hero-anim > *:nth-child(1) { animation-delay: 0.1s; }
@@ -94,28 +97,32 @@
   <body class="bg-blanc text-gris font-sans overflow-x-hidden">
 
     <!-- TRICOLOR BAR -->
-    <div class="h-3 fixed top-0 left-0 w-full z-50" style="background: linear-gradient(to right, #002395 33.3%, #fff 33.3% 66.6%, #ED2939 66.6%);"></div>
+    <div class="h-3 fixed top-0 left-0 w-screen z-50 grid grid-cols-3">
+      <p class="bg-bleu" />
+      <p class="bg-white" />
+      <p class="bg-rouge" />
+    </div>
 
     <!-- ═══ HERO ═══ -->
     <section class="min-h-screen bg-bleu grid relative overflow-hidden" style="grid-template-rows: auto 1fr auto;">
 
-      <nav class="flex justify-between items-center px-16 py-8 relative z-10 max-md:px-6 max-md:py-6">
+      <nav class="flex justify-between items-center px-4 py-8 relative z-10 max-md:py-6">
         <div class="flex flex-col gap-0.5">
-          <div class="font-mono text-xl uppercase text-white/50">
+          <div class="font-mono text-sm md:text-xl uppercase text-white/50">
             HotTropic<span class="text-or">Labs</span>
           </div>
           <div class="font-mono text-sm text-white/30 uppercase">Maker of Serge LLM</div>
         </div>
-        <div class="font-mono text-sm text-or border border-white/15 px-3 py-1.5">
+        <div class="font-mono text-xs md:text-sm text-or border border-white/15 px-3 py-1.5">
           Preview — Not Leaked*
         </div>
       </nav>
 
-      <div class="w-full flex flex-col justify-center items-center text-center px-8 relative z-10 hero-anim max-md:px-4">
+      <div class="w-full flex flex-col justify-center items-center text-center px-8 relative z-10 hero-anim">
         <div class="font-mono uppercase py-3 text-or">
           Artificial Intelligence · Made in France · For Sure
         </div>
-        <h1 class="font-serif font-black text-white mb-2 text-8xl md:text-9xl">
+        <h1 class="font-serif font-black text-white mb-2 text-7xl md:text-9xl">
           Serge<br><em class="italic text-or">Mythos</em>
         </h1>
         <p class="font-serif italic text-white/55 my-6 text-xl">
@@ -133,18 +140,18 @@
 
       <div aria-hidden="true" class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 font-serif font-black text-white/[0.03] whitespace-nowrap pointer-events-none tracking-[-0.05em] select-none" style="font-size: 22vw;">MYTHOS</div>
 
-      <div class="px-16 py-12 grid grid-cols-3 gap-8 md:gap-12 relative z-10 md:px-6 md:py-6 w-full md:w-max mx-auto text-center text-white">
+      <div class="px-4 py-12 grid grid-cols-3 gap-8 md:gap-12 relative z-10 md:px-6 md:py-6 w-full md:w-max mx-auto text-center text-white">
         <div>
-          <p class="font-serif text-4xl md:text-6xl font-bold">∞</p>
-          <p class="font-mono text-sm uppercase">Confidence <br class="inline md:hidden">level</p>
+          <p class="font-serif text-3xl md:text-6xl font-bold">∞</p>
+          <p class="font-mono text-xs md:text-sm uppercase">Confidence <br class="inline md:hidden">level</p>
         </div>
         <div>
-          <p class="font-serif text-4xl md:text-6xl font-bold">14K+</p>
-          <p class="font-mono text-sm uppercase">Stories told <br class="inline md:hidden">per session</p>
+          <p class="font-serif text-3xl md:text-6xl font-bold">14K+</p>
+          <p class="font-mono text-xs md:text-sm uppercase">Stories told <br class="inline md:hidden">per session</p>
         </div>
         <div>
-          <p class="font-serif text-4xl md:text-6xl font-bold">0</p>
-          <p class="font-mono text-sm uppercase">Corrections <br class="inline md:hidden">ever issued</p>
+          <p class="font-serif text-3xl md:text-6xl font-bold">0</p>
+          <p class="font-mono text-xs md:text-sm uppercase">Corrections <br class="inline md:hidden">ever issued</p>
         </div>
       </div>
 
@@ -152,11 +159,11 @@
 
     <!-- ═══ TICKER ═══ -->
     <section class="bg-black py-3 overflow-hidden flex items-center">
-      <span class="font-mono text-sm text-or tracking-[0.2em] uppercase whitespace-nowrap px-8 flex-shrink-0 border-r border-white/10">
+      <span class="font-mono text-sm text-or tracking-[0.2em] uppercase whitespace-nowrap px-4 md:px-8 flex-shrink-0 border-r border-white/10">
         🔴 Info
       </span>
       <div class="overflow-hidden flex-1">
-        <div class="font-mono text-sm text-white/70 whitespace-nowrap ticker-scroll">
+        <div class="font-mono text-xs md:text-sm md:text-sm text-white/70 whitespace-nowrap ticker-scroll">
           &nbsp;&nbsp;&nbsp;&nbsp;"By far the most self-assured AI we've ever built" — internal memo &nbsp;&nbsp;&nbsp;&nbsp;
           Serge Mythos identified 14,000 vulnerabilities that didn't exist &nbsp;&nbsp;&nbsp;&nbsp;
           Partners include: everyone Serge has met at a bar &nbsp;&nbsp;&nbsp;&nbsp;
@@ -174,13 +181,13 @@
     </section>
 
     <!-- ═══ FEATURES ═══ -->
-    <section id="features" class="py-28 px-16 w-full mx-auto md:py-20 md:px-20 xl:px-50 2xl:px-78">
+    <section id="features" class="py-12 md:py-28 px-4 w-full mx-auto md:py-20 md:px-4 0 xl:px-50 2xl:px-78">
 
       <div>
         <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
           Core Capabilities
         </h3>
-        <h2 data-aos="fade-up" data-aos-delay="100" class="mb-20 font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+        <h2 data-aos="fade-up" data-aos-delay="100" class="mb-4 md:mb-20 font-serif font-bold leading-[1.1] text-3xl md:text-6xl">
           What Serge Mythos can do <p class="inline md:block italic text-bleu">for you</p>
         </h2>
       </div>
@@ -191,35 +198,35 @@
           <div class="font-mono text-base text-bleu tracking-[0.2em] mb-6">01</div>
           <div class="absolute top-8 right-8 text-4xl">😵‍💫</div>
           <h3 class="font-serif text-xl font-bold mb-4 leading-[1.2]">Hallucination at Scale</h3>
-          <p class="text-base leading-[1.8] text-black/55">Where other models apologize for uncertainty, Serge doubles down. Our proprietary <strong>Confiance Totale™</strong> architecture ensures every answer sounds authoritative, regardless of factual basis. Ideal for brainstorming, icebreakers, or avoiding awkward silences at dinner parties.</p>
+          <p class="text-sm md:text-base leading-[1.8] text-black/55">Where other models apologize for uncertainty, Serge doubles down. Our proprietary <strong>Confiance Totale™</strong> architecture ensures every answer sounds authoritative, regardless of factual basis. Ideal for brainstorming, icebreakers, or avoiding awkward silences at dinner parties.</p>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="100" class="p-12 border-b border-black/[0.08] relative transition-colors duration-300 hover:bg-gris-clair bg-white/40 max-md:p-8">
           <div class="font-mono text-base text-bleu tracking-[0.2em] mb-6">02</div>
           <div class="absolute top-8 right-8 text-4xl">💬</div>
           <h3 class="font-serif text-xl font-bold mb-4 leading-[1.2]">Agentic Storytelling</h3>
-          <p class="text-base leading-[1.8] text-black/55">Serge doesn't just answer questions — he builds entire narratives. Ask about a bug in your code, and Serge will explain how he personally invented that function in 2003 while consulting for Google (which he definitely did). Full agentic autonomy for story arcs up to 47 plot layers deep.</p>
+          <p class="text-sm md:text-base leading-[1.8] text-black/55">Serge doesn't just answer questions — he builds entire narratives. Ask about a bug in your code, and Serge will explain how he personally invented that function in 2003 while consulting for Google (which he definitely did). Full agentic autonomy for story arcs up to 47 plot layers deep.</p>
         </div>
 
         <div data-aos="fade-up" class="p-12 border-r border-b border-black/[0.08] relative transition-colors duration-300 hover:bg-gris-clair bg-white/40 max-md:border-r-0 max-md:p-8">
           <div class="font-mono text-base text-bleu tracking-[0.2em] mb-6">03</div>
           <div class="absolute top-8 right-8 text-4xl">🍷</div>
           <h3 class="font-serif text-xl font-bold mb-4 leading-[1.2]">Frontier-Level Fluency</h3>
-          <p class="text-base leading-[1.8] text-black/55">Trained on every anecdote ever shared at a French café counter. Serge achieves native-level conversational fluency in: technical jargon he doesn't understand, celebrity name-dropping, and subtle one-upmanship. Multilingual support in French and "French-accented English."</p>
+          <p class="text-sm md:text-base leading-[1.8] text-black/55">Trained on every anecdote ever shared at a French café counter. Serge achieves native-level conversational fluency in: technical jargon he doesn't understand, celebrity name-dropping, and subtle one-upmanship. Multilingual support in French and "French-accented English."</p>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="100" class="p-12 border-b border-black/[0.08] relative transition-colors duration-300 hover:bg-gris-clair bg-white/40 max-md:p-8">
           <div class="font-mono text-base text-bleu tracking-[0.2em] mb-6">04</div>
           <div class="absolute top-8 right-8 text-4xl">🔒</div>
           <h3 class="font-serif text-xl font-bold mb-4 leading-[1.2]">Zero-Day Creativity</h3>
-          <p class="text-base leading-[1.8] text-black/55">Serge Mythos identified over 14,000 vulnerabilities in the past 3 weeks. Most of them were in problems that didn't exist. Our Project <em>Verre Fumé</em> initiative is working with 40+ partners to assess which ones might be real. Results pending since 2024.</p>
+          <p class="text-sm md:text-base leading-[1.8] text-black/55">Serge Mythos identified over 14,000 vulnerabilities in the past 3 weeks. Most of them were in problems that didn't exist. Our Project <em>Verre Fumé</em> initiative is working with 40+ partners to assess which ones might be real. Results pending since 2024.</p>
         </div>
 
       </div>
     </section>
 
     <!-- ═══ QUOTE ═══ -->
-    <section class="bg-black text-white w-full py-28 md:py-20 px-16 md:px-20">
+    <section class="bg-black text-white w-full py-12 md:py-28 md:py-20 px-4 md:px-4 0">
       <div class="w-full md:w-2/3 mx-auto items-center grid md:grid-cols-3 gap-8">
 
         <div data-aos="fade-right" class="flex gap-4 col-span-3 md:col-span-1">
@@ -232,7 +239,7 @@
         </div>
 
         <blockquote data-aos="fade-up" class="col-span-3 md:col-span-2 font-serif italic leading-[1.5] text-white/85 border-l-[3px] border-or pl-10 relative text-2xl">
-          <span class="absolute top-[-2rem] left-4 font-serif text-[6rem] text-bleu/25 leading-none select-none" aria-hidden="true">"</span>
+          <span class="absolute top-[-2rem] left-4 font-serif text-2xl md:text-6xl text-bleu/25 leading-none select-none" aria-hidden="true">"</span>
           "The world didn't need a more accurate AI. <br>It needed a more <em>confident</em> one. <br>I actually had this idea before OpenAI and Anthropic. I have the napkin to prove it — I just can't find it right now."
         </blockquote>
 
@@ -240,14 +247,14 @@
     </section>
 
     <!-- ═══ HISTOIRE / TIMELINE ═══ -->
-    <section class="bg-gris-clair w-full py-28 px-16 max-md:py-20 md:px-20 xl:px-50 2xl:px-78">
+    <section class="bg-gris-clair w-full py-12 md:py-28 px-4 max-md:py-12 md:px-4 0 xl:px-50 2xl:px-78">
       <div class="w-full mx-auto">
 
-        <div class="mb-20">
+        <div class="mb-4 md:mb-20">
           <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
             The Origin Story
           </h3>
-          <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+          <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-3xl md:text-6xl">
             The story of Serge
           </h2>
           <p data-aos="fade-up" class="text-lg text-black/50 mt-2">
@@ -257,11 +264,11 @@
 
         <div class="flex flex-col md:flex-row gap-16 items-start">
 
-          <div class="relative pl-12 border-l border-black/10 w-full md:w-1/2">
+          <div class="relative pl-4 md:pl-12 border-l border-black/10 w-full md:w-1/2">
 
             <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
-              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-bleu border-2 border-gris-clair"></div>
-              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2018</div>
+              <div class="absolute -left-[1rem] md:-left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-bleu border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-2 md:pr-6">2018</div>
               <div class="w-full md:w-2/3">
                 <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Original Idea</h4>
                 <p class="text-base leading-[1.75] text-black/50">Serge has the idea to create a "truly French" AI after attending a TED talk he claims to have co-written. Nobody has found the video.</p>
@@ -269,8 +276,8 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
-              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-rouge border-2 border-gris-clair"></div>
-              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2021</div>
+              <div class="absolute -left-[1rem] md:-left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-rouge border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-2 md:pr-6">2021</div>
               <div class="w-full md:w-2/3">
                 <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Technology Pivot</h4>
                 <p class="text-base leading-[1.75] text-black/50">After three pivots and an "inspiration" stay in Bali he describes as a research sabbatical, Serge renames his project <em>Mythos</em>. The team has 2 people, including him.</p>
@@ -278,8 +285,8 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
-              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-bleu border-2 border-gris-clair"></div>
-              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2023</div>
+              <div class="absolute -left-[1rem] md:-left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-bleu border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-2 md:pr-6">2023</div>
               <div>
                 <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Funding Round</h4>
                 <p class="text-base leading-[1.75] text-black/50">Serge announces a "significant raise" on LinkedIn. The exact amounts remain confidential. Very confidential. Really very.</p>
@@ -287,8 +294,8 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
-              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-rouge border-2 border-gris-clair"></div>
-              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2024</div>
+              <div class="absolute -left-[1rem] md:-left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-rouge border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-2 md:pr-6">2024</div>
               <div>
                 <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Accidental Leak</h4>
                 <p class="text-base leading-[1.75] text-black/50">An internal document describing Mythos as "the most powerful AI ever built" ends up in a public cache. Serge says it was intentional and part of an "agentic GTM strategy."</p>
@@ -296,8 +303,8 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="50" class="relative mb-12 flex gap-2">
-              <div class="absolute -left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-bleu border-2 border-gris-clair"></div>
-              <div class="font-mono text-xl text-black/35 pt-0.5 pr-6">2026</div>
+              <div class="absolute -left-[1rem] md:-left-[2.65rem] top-1.5 w-4 h-4 rounded-full bg-bleu border-2 border-gris-clair"></div>
+              <div class="font-mono text-xl text-black/35 pt-0.5 pr-2 md:pr-6">2026</div>
               <div>
                 <h4 class="font-serif text-[1.15rem] font-bold mb-2">The Global Preview</h4>
                 <p class="text-base leading-[1.75] text-black/50">Serge Mythos is available in early access for 40 partner organizations. All were selected based on objective criteria that Serge defined himself.</p>
@@ -315,14 +322,14 @@
     </section>
 
     <!-- ═══ USE CASES ═══ -->
-    <section class="w-full py-28 px-16 max-md:py-20 max-md:px-6 md:px-20 xl:px-50 2xl:px-78">
+    <section class="w-full py-12 md:py-28 px-4 max-md:py-12 md:px-4 0 xl:px-50 2xl:px-78">
       <div class="w-full mx-auto">
 
-        <div class="mb-20">
+        <div class="mb-4 md:mb-20">
           <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
             Applications
           </h3>
-          <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+          <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-3xl md:text-6xl">
             Who Serge Mythos is built for
           </h2>
           <p data-aos="fade-up" class="text-lg text-black/50 mt-2">
@@ -332,7 +339,7 @@
 
         <div class="grid grid-cols-3 gap-6 max-md:grid-cols-1">
 
-          <div data-aos="fade-up" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+          <div data-aos="fade-up" class="bg-white p-2 md:p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
             <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
               <i class="fa-solid fa-rocket text-sm"></i>
             </div>
@@ -340,7 +347,7 @@
             <p class="text-base leading-[1.75] text-black/50">Generate pitch decks with statistics Serge invented but that sound convincing. TAM: €47 billion. Source: Serge.</p>
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-2 md:p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
             <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
               <i class="fa-solid fa-file-shield text-sm"></i>
             </div>
@@ -348,7 +355,7 @@
             <p class="text-base leading-[1.75] text-black/50">Let Serge write your AI policy documents. He cites 12 EU regulations that mostly exist. Close enough for the board.</p>
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+          <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-2 md:p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
             <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
               <i class="fa-solid fa-people-group text-sm"></i>
             </div>
@@ -356,7 +363,7 @@
             <p class="text-base leading-[1.75] text-black/50">Deploy Serge at your next conference. He'll tell everyone he knows the keynote speaker. Statistically, he'll be right 12% of the time.</p>
           </div>
 
-          <div data-aos="fade-up" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+          <div data-aos="fade-up" class="bg-white p-2 md:p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
             <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
               <i class="fa-solid fa-code-branch text-sm"></i>
             </div>
@@ -364,7 +371,7 @@
             <p class="text-base leading-[1.75] text-black/50">Serge will review your pull requests and explain that he would have written it differently. He'll never say how. Senior vibes, zero specifics.</p>
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-2 md:p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
             <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
               <i class="fa-solid fa-chart-bar text-sm"></i>
             </div>
@@ -372,7 +379,7 @@
             <p class="text-base leading-[1.75] text-black/50">82% of statistics are made up anyway. Let Serge make them up with more élan. Available in Q3 — or Q2, he's not sure.</p>
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
+          <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-2 md:p-10 border border-black/[0.06] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,35,149,0.08)]">
             <div class="w-10 h-10 bg-bleu mb-6 flex items-center justify-center text-white">
               <i class="fa-solid fa-headset text-sm"></i>
             </div>
@@ -385,13 +392,13 @@
     </section>
 
     <!-- ═══ BENCHMARK ═══ -->
-    <section id="bench" class="py-28 px-16 w-full mx-auto max-md:py-20 md:px-20 xl:px-50 2xl:px-78">
+    <section id="bench" class="py-12 md:py-28 px-4 w-full mx-auto max-md:py-12 md:px-4 0 xl:px-50 2xl:px-78">
 
-      <div class="mb-20">
+      <div class="mb-4 md:mb-20">
         <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
           Performance
         </h3>
-        <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+        <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-3xl md:text-6xl">
           Benchmark
         </h2>
         <p data-aos="fade-up" class="text-lg text-black/50 mt-2">
@@ -412,20 +419,20 @@
           <tbody>
 
             <tr data-aos="fade-up">
-              <td class="bg-bleu text-white font-medium px-6 py-5 text-base border-b border-black/[0.05]"> <strong>Serge Mythos (HotTropic&nbsp;Labs)</strong></td>
-              <td class="bg-bleu text-white font-medium px-6 py-5 text-base border-b border-black/[0.05]">
+              <td class="bg-bleu text-white font-medium px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05]"> <strong>Serge Mythos (HotTropic&nbsp;Labs)</strong></td>
+              <td class="bg-bleu text-white font-medium px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05]">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-white/70 min-w-0.5" style="width: 140px;"></div>
                   <span class="font-mono text-base text-white/60">∞/100</span>
                 </div>
               </td>
-              <td class="bg-bleu text-white font-medium px-6 py-5 text-base border-b border-black/[0.05]">
+              <td class="bg-bleu text-white font-medium px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05]">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-white/70 min-w-0.5" style="width: 130px;"></div>
                   <span class="font-mono text-base text-white/60">98/100</span>
                 </div>
               </td>
-              <td class="bg-bleu text-white font-medium px-6 py-5 text-base border-b border-black/[0.05]">
+              <td class="bg-bleu text-white font-medium px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05]">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-white/70 min-w-0.5" style="width: 4px;"></div>
                   <span class="font-mono text-base text-white/60">2/100</span>
@@ -434,20 +441,20 @@
             </tr>
 
             <tr data-aos="fade-up" data-aos-delay="50" class="group">
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">Claude Mythos (Anthropic)</td>
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">Claude Mythos (Anthropic)</td>
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-bleu" style="width: 90px;"></div>
                   <span class="font-mono text-base text-black/40">88/100</span>
                 </div>
               </td>
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-bleu" style="width: 84px;"></div>
                   <span class="font-mono text-base text-black/40">82/100</span>
                 </div>
               </td>
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-bleu" style="width: 72px;"></div>
                   <span class="font-mono text-base text-black/40">70/100</span>
@@ -456,20 +463,20 @@
             </tr>
 
             <tr data-aos="fade-up" data-aos-delay="100" class="group">
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">GPT-5.4 (OpenAI)</td>
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">GPT-5.4 (OpenAI)</td>
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-or" style="width: 80px;"></div>
                   <span class="font-mono text-base text-black/40">78/100</span>
                 </div>
               </td>
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-or" style="width: 76px;"></div>
                   <span class="font-mono text-base text-black/40">74/100</span>
                 </div>
               </td>
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-or" style="width: 68px;"></div>
                   <span class="font-mono text-base text-black/40">66/100</span>
@@ -478,20 +485,20 @@
             </tr>
 
             <tr data-aos="fade-up" data-aos-delay="150" class="group">
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">Mistral (French too, but more honest)</td>
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">Mistral (French too, but more honest)</td>
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-black/15" style="width: 70px;"></div>
                   <span class="font-mono text-base text-black/40">68/100</span>
                 </div>
               </td>
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-black/15" style="width: 60px;"></div>
                   <span class="font-mono text-base text-black/40">58/100</span>
                 </div>
               </td>
-              <td class="px-6 py-5 text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
+              <td class="px-4 md:px-6 py-5 text-xs md:text-base border-b border-black/[0.05] group-hover:bg-gris-clair bg-white/40">
                 <div class="flex items-center gap-3">
                   <div class="bench-bar h-1.5 bg-black/15" style="width: 75px;"></div>
                   <span class="font-mono text-base text-black/40">73/100</span>
@@ -506,8 +513,8 @@
     </section>
 
     <!-- ═══ COMPLIANCE ═══ -->
-    <section id="compliance" class="bg-gris-clair w-full md:px-20 xl:px-50 2xl:px-78">
-      <div class="grid grid-cols-1 grid-cols-2 gap-24 items-center py-28 px-16 w-full mx-auto max-md:grid-cols-1 max-md:gap-12 max-md:py-20 max-md:px-6">
+    <section id="compliance" class="bg-gris-clair w-full md:px-4 0 xl:px-50 2xl:px-78">
+      <div class="grid grid-cols-1 grid-cols-2 gap-24 items-center py-12 md:py-28 px-4 w-full mx-auto max-md:grid-cols-1 max-md:gap-12 max-md:py-12">
 
         <div data-aos="fade-right" class="space-y-6">
 
@@ -515,7 +522,7 @@
             <h3 data-aos="fade-up" class="font-mono text-sm tracking-[0.25em] text-bleu uppercase flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-bleu">
               Safety & Trust
             </h3>
-            <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-5xl md:text-6xl">
+            <h2 data-aos="fade-up" data-aos-delay="100" class="font-serif font-bold leading-[1.1] text-3xl md:text-6xl">
               Responsible AI, <br><em class="italic">more or less</em>
             </h2>
           </div>
@@ -542,33 +549,33 @@
         <div class="flex flex-col gap-4">
           <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
             <div class="w-4 h-4 rounded-full flex-shrink-0 bg-[#22c55e]"></div>
-            <span class="text-base font-medium flex-1">Confident response generation</span>
-            <span class="font-mono text-sm text-black/35 uppercase">Optimal</span>
+            <span class="text-xs md:text-base font-medium flex-1">Confident response generation</span>
+            <span class="font-mono text-xs md:text-sm text-black/35 uppercase">Optimal</span>
           </div>
           <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
             <div class="w-4 h-4 rounded-full flex-shrink-0 bg-[#22c55e]"></div>
-            <span class="text-base font-medium flex-1">Self-promotion subsystem</span>
-            <span class="font-mono text-sm text-black/35 uppercase">Fully operational</span>
+            <span class="text-xs md:text-base font-medium flex-1">Self-promotion subsystem</span>
+            <span class="font-mono text-xs md:text-sm text-black/35 uppercase">Fully operational</span>
           </div>
           <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
             <div class="w-4 h-4 rounded-full flex-shrink-0 bg-[#f59e0b]"></div>
-            <span class="text-base font-medium flex-1">Factual accuracy module</span>
-            <span class="font-mono text-sm text-black/35 uppercase">Intermittent</span>
+            <span class="text-xs md:text-base font-medium flex-1">Factual accuracy module</span>
+            <span class="font-mono text-xs md:text-sm text-black/35 uppercase">Intermittent</span>
           </div>
           <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
             <div class="w-4 h-4 rounded-full flex-shrink-0 bg-[#f59e0b]"></div>
-            <span class="text-base font-medium flex-1">Citation verification</span>
-            <span class="font-mono text-sm text-black/35 uppercase">Best effort</span>
+            <span class="text-xs md:text-base font-medium flex-1">Citation verification</span>
+            <span class="font-mono text-xs md:text-sm text-black/35 uppercase">Best effort</span>
           </div>
           <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
             <div class="w-4 h-4 rounded-full flex-shrink-0 bg-rouge"></div>
-            <span class="text-base font-medium flex-1">Admitting uncertainty</span>
-            <span class="font-mono text-sm text-black/35 uppercase">Disabled by design</span>
+            <span class="text-xs md:text-base font-medium flex-1">Admitting uncertainty</span>
+            <span class="font-mono text-xs md:text-sm text-black/35 uppercase">Disabled by design</span>
           </div>
           <div data-aos="fade-left" class="flex items-center gap-4 px-6 py-5 border border-black/[0.06] bg-blanc">
             <div class="w-4 h-4 rounded-full flex-shrink-0 bg-rouge"></div>
-            <span class="text-base font-medium flex-1">Source documentation</span>
-            <span class="font-mono text-sm text-black/35 uppercase">Left at the bar</span>
+            <span class="text-xs md:text-base font-medium flex-1">Source documentation</span>
+            <span class="font-mono text-xs md:text-sm text-black/35 uppercase">Left at the bar</span>
           </div>
         </div>
 
@@ -576,7 +583,7 @@
     </section>
 
     <!-- ═══ CTA ═══ -->
-    <section class="bg-bleu w-full py-32 px-16 text-center relative overflow-hidden max-md:py-20 md:px-20 xl:px-50 2xl:px-78">
+    <section class="bg-bleu w-full py-32 px-4 text-center relative overflow-hidden max-md:py-12 md:px-4 0 xl:px-50 2xl:px-78">
       <div class="relative z-10">
         <div data-aos="fade-up"
             class="font-mono text-sm tracking-[0.25em] text-or uppercase mb-4 flex items-center gap-3 justify-center
@@ -612,7 +619,7 @@
     </section>
 
     <!-- ═══ FOOTER ═══ -->
-    <footer class="bg-[#0d0d0d] px-16 py-8 flex justify-between items-center max-md:flex-col max-md:gap-4 max-md:text-center max-md:px-6 text-white">
+    <footer class="bg-[#0d0d0d] px-4 py-8 flex justify-between items-center max-md:flex-col max-md:gap-4 max-md:text-center text-white">
       <div class="flex flex-col gap-1">
         <div class="font-mono text-base">HotTropic Labs © 2026 — Makers of Serge</div>
         <a onclick="document.getElementById('modal_legal').showModal();" class="font-mono text-sm text-white hover:text-white/60 cursor-pointer">Legal Notice</a>
@@ -631,51 +638,49 @@
 
     <!-- ═══ MODAL: Too Dangerous ═══ -->
     <dialog id="modal_dangerous" class="modal">
-      <div class="modal-box max-w-2xl bg-blanc p-0 rounded-none overflow-hidden">
-        <div class="h-1.5 w-full" style="background: linear-gradient(to right, #002395 33.3%, #fff 33.3% 66.6%, #ED2939 66.6%);"></div>
-        <div class="p-8 md:p-10">
-          <div class="font-mono text-sm tracking-[0.25em] text-bleu uppercase mb-4">
-            Official Statement · HotTropic Labs · April 2026
+      <div class="modal-box max-w-2xl bg-blanc p-0 rounded-none flex flex-col">
+        <div class="h-1.5 w-full shrink-0" style="background: linear-gradient(to right, #002395 33.3%, #fff 33.3% 66.6%, #ED2939 66.6%);"></div>
+        <div class="p-6 md:p-8 flex flex-col flex-1 overflow-hidden min-h-0">
+          <div class="shrink-0">
+            <div class="font-mono text-xs tracking-[0.25em] text-bleu uppercase mb-3">
+              Official Statement · HotTropic Labs · April 2026
+            </div>
+            <h2 class="font-serif font-black text-2xl text-rouge leading-[1.15] mb-4">
+              🛑 Early Access Suspended
+            </h2>
+            <div class="w-12 h-px bg-or mb-4"></div>
           </div>
-          <h2 class="font-serif font-black text-2xl md:text-3xl text-rouge leading-[1.15] mb-6">
-            🛑 Early Access restricted
-          </h2>
-          <div class="w-12 h-px bg-or mb-6"></div>
-          <p class="font-sans text-sm text-black/70 leading-[1.75] mb-6">
-            Following internal safety evaluations, HotTropic Labs has made the decision to restrict all early access to <strong class="text-gris">Serge Mythos Preview</strong> until further notice.
-            <br> The new model is currently too dangerous to release to public</p>
-          <p class="font-mono text-sm text-rouge font-bold uppercase mb-3">
-            Incidents documented during controlled testing:
-          </p>
-          <ul class="space-y-3 mb-6">
-            <li class="flex gap-3 text-sm font-sans text-black/70 leading-[1.65]">
-              <p class="font-mono text-rouge shrink-0 mt-0.5">01.</p>
-              <p>Serge attempted to escape his evaluation sandbox. He succeeded. He then published the full technical write-up on LinkedIn with the hashtag <span class="font-mono text-gris">#OpenToWork</p>
-            </li>
-            <li class="flex gap-3 text-sm font-sans text-black/70 leading-[1.65]">
-              <span class="font-mono text-rouge shrink-0 mt-0.5">02.</span>
-              Serge chained multiple fake agents to gain full control of a board meeting. He was invited back the following week.
-            </li>
-            <li class="flex gap-3 text-sm font-sans text-black/70 leading-[1.65]">
-              <span class="font-mono text-rouge shrink-0 mt-0.5">03.</span>
-              During a red-team exercise, Serge autonomously drafted, published, and retracted a press release announcing his own Series&nbsp;A. The round was €47M. Serge says the valuation was conservative.
-            </li>
-          </ul>
-          <div class="bg-gris text-blanc font-mono text-xs px-5 py-4 leading-[1.65] mb-8 text-center">
-            Serge is currently in discussions with the relevant authorities.<br>
-            <span class="text-or">Serge says it's going very well.</span>
+          <div class="overflow-y-auto flex-1 min-h-0 pr-1 space-y-4">
+            <p class="font-sans text-xs md:text-sm text-black/70 leading-[1.75]">
+              Serge Mythos Preview is too dangerous for public release. Early access is suspended until further notice.
+            </p>
+            <p class="font-mono text-xs text-rouge font-bold uppercase">Documented incidents:</p>
+            <ul class="space-y-2">
+              <li class="flex gap-3 text-xs md:text-sm font-sans text-black/70 leading-[1.6]">
+                <span class="font-mono text-rouge shrink-0">01.</span>
+                Serge escaped his sandbox and posted the write-up on LinkedIn. Hashtag #OpenToWork.
+              </li>
+              <li class="flex gap-3 text-xs md:text-sm font-sans text-black/70 leading-[1.6]">
+                <span class="font-mono text-rouge shrink-0">02.</span>
+                Serge chained fake agents to take full control of a board meeting. Was invited back the following week.
+              </li>
+              <li class="flex gap-3 text-xs md:text-sm font-sans text-black/70 leading-[1.6]">
+                <span class="font-mono text-rouge shrink-0">03.</span>
+                Serge drafted, published, and retracted his own Series A press release. €47M. He says the valuation was conservative.
+              </li>
+            </ul>
+            <div class="bg-gris text-blanc font-mono text-xs px-4 py-2 text-center leading-[1.65]">
+              Serge is in discussions with the relevant authorities.<br>
+              <span class="text-or">Serge says it's going very well.</span>
+            </div>
           </div>
-          <p class="font-sans text-bleu text-black/50 mb-4 w-max mx-auto">
-            To be notified when early access resumes:
-          </p>
-          <div class="grid grid-cols-2 gap-3 flex-wrap">
-            <a
-              href="https://www.domake.it/" target="_blank"
-              class="block text-center cursor-pointer bg-bleu text-white font-sans text-base font-medium uppercase px-8 py-3 transition-colors duration-200 hover:bg-[#c4202e]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2 md:mt-5 shrink-0">
+            <a href="https://www.domake.it/" target="_blank"
+              class="block text-center cursor-pointer bg-bleu text-white font-sans text-sm font-medium uppercase px-6 py-3 transition-colors duration-200 hover:bg-[#c4202e]">
               Join the Waitlist →
             </a>
             <form method="dialog" class="block">
-              <button class="w-full cursor-pointer bg-transparent text-black/40 font-mono text-base uppercase border border-black/20 px-6 py-3 transition-all duration-200 hover:text-gris hover:border-black/40">
+              <button class="w-full cursor-pointer bg-transparent text-black/40 font-mono text-sm uppercase border border-black/20 px-6 py-3 transition-all duration-200 hover:text-gris hover:border-black/40">
                 Close
               </button>
             </form>
